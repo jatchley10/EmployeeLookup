@@ -30,14 +30,13 @@ public class DatabasePracticeView {
                     Scanner inTwo = new Scanner(System.in);
                     userInput = inTwo.next();
                     c.printResultSet(c.findPersonUsingID(userInput));
-                    System.out.println("\n\n\n\n");
+                    
                     break;
                 case 2:
                     System.out.println("Enter the id of the person you are looking for: ");
                     Scanner inThree = new Scanner(System.in);
                     userInput = inThree.next();
                     c.printResultSet(c.getEmployeeType(userInput));
-                    System.out.println("\n\n\n\n\n\n\n\n");
                     break;
                 case 3:
                     System.out.println("Enter the id of the person you are looking for: ");
@@ -46,10 +45,10 @@ public class DatabasePracticeView {
                     String first = userInputArray[0];
                     String last = userInputArray[1];
                     c.printResultSet(c.getDepartment(first, last));
-                    System.out.println("\n\n\n\n\n\n\n\n");
                     break;
                 case 4:
                     userExit = true;
+                    c.close();
                     break;
                     
                 default:
